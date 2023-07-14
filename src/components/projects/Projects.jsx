@@ -40,7 +40,7 @@ function Projects() {
           url = 'https://iris94.github.io/Tetris/'
         break;
       case Neon:
-        url = 'https://neoncity.netlify.app/'
+        url = 'https://iris94.github.io/neon-radio/'
         break;
       case Law:
         url = 'https://iris94.github.io/Law-Project/'
