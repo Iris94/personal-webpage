@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Mecha';
+    src: url('../../assets/Denton.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'eurostile';
+    src: url('../../assets/eurostile.TTF') format('truetype');
+}
+
+.code-info {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 6fr 2fr;
+    place-items: center;
+}
+
+.code-main {
+    display: grid;
+    place-items: center;
+}
+
+.code-main-split {
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.code-mobile-split {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+
+.code-main-nav {
+    display: grid;
+    place-items: center;
+    width: 50vmin;
+}
+
+.code-main-nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin
+}
+
+.code-main-nav > ul > li > button {
+    font-size: 3vmin;
+    border: none;
+    font-family: 'Mecha';
+    background-color: rgba(13, 13, 13, 0.9);
+    color: #D9A036;
+    clip-path: polygon(
+        5%          0%,
+        100%         0%,
+        100%        50%,
+        95%        100%,
+        0%          100%,
+        0%          50%
+    );
+}
+
+.width-50 {
+    width: 50vmin
+}
+.width-45 {
+    width: 45vmin
+}
+.width-40 {
+    width: 40vmin
+}
+
+.code-main-nav > ul > li > button:hover {
+    color: #F2E750;
+    cursor: pointer;
+}
+
+
+
+.code-main-screen {
+    display: grid;
+    place-items: center;
+}
+
+.code-main-screen-laptop {
+    position: relative;
+}
+
+.laptop {
+    width: 100%;
+}
+
+.gif {
+    position: absolute;
+    top: 27%;
+    left: 18%;
+    width: 64%;
+    height: 39%;
+    border-radius: 0.5vmin;
+}
+
+.gif:hover {
+    cursor: pointer;
+}
+
+.arrows {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    top: 50%;
+    display: flex;
+    gap: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows > div:nth-child(1) {
+    width: 10%;
+    height: 80%;
+    background: #0D0D0D;
+    clip-path: polygon(
+        50%     0%,
+        100%    100%,
+        0%      100%
+    );
+    transform: rotate(-90deg);
+}
+
+.arrows > div:nth-child(2) {
+    width: 10%;
+    height: 80%;
+    background: #0D0D0D;    
+    clip-path: polygon(
+        50%     0%,
+        100%    100%,
+        0%      100%
+    );
+    transform: rotate(90deg);
+}
+
+.arrows > div:hover {
+    cursor: pointer;
+}
+
+
+
+
+.code-main-text {
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 800px) {
+    .code-main-text {
+        display: grid;
+        place-items: center;
+        position: relative;
+        bottom: 30vmin
+    }
+}
+
+.code-main-text-screen {
+    width: 95%;
+    height: 30vmin;
+    color: white;
+    background-color: rgba(13, 13, 13, 0.9);
+    clip-path: polygon(
+        5%          0%,
+        100%        0%,
+        100%        90%,
+        95%         100%,
+        0%          100%,
+        0%          10%
+    );
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    align-items: center;
+    padding: 2vmin;
+}
+
+.code-main-text-screen > h3 {
+    font-family: 'Mecha';
+    display: grid;
+    place-items: center;
+    font-size: 3.5vmin;
+    color: #F2E750;
+}
+
+.code-main-text-screen > p {
+    font-family: 'eurostile';
+    font-size: 3vmin;
+}
+
+
+
+
+.code-skills {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    place-items: center;
+    background-color: rgba(13, 13, 13, 0.9);
+    width: 30%;
+    clip-path: polygon(
+        5%          0%,
+        100%        0%,
+        100%        90%,
+        95%         100%,
+        0%          100%,
+        0%          10%
+    );
+    position: relative;
+    bottom: 40%
+}
+
+@media (max-width: 800px) {
+    .code-skills {
+        bottom: 110%;
+        width: 75%
+    }
+}
+
+.code-skills > h3 {
+    font-family: 'Mecha';
+    font-size: 3vmin;
+    color: #F2E750;
+}
+
+.code-images {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.code-images > img {
+    width: 5vmin;
+    height: 5vmin;
+}
+
+.code-images > img:nth-child(3) {
+    width: 7vmin;
+    height: 7vmin;
+}
+

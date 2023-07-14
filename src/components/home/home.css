@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Mecha';
+    src: url('../../assets/Denton.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'eurostile';
+    src: url('../../assets/eurostile.TTF') format('truetype');
+}
+
+.home__container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.landing-info {
+    font-family: 'Mecha';
+    width: 40vmax;
+    height: 15vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    gap: 2vmin;
+    font-size: 2vmin;
+    color: #D9A036;
+    z-index: 2;
+    background-color: rgba(13, 13, 13, 0.95);
+    padding: 4vmin;
+    clip-path: polygon(
+        5%          0%,
+        100%        0%,
+        100%        90%,
+        95%         100%,
+        0%          100%,
+        0%          10%
+    );
+}
+
+.landing-name {
+    display: flex;
+    justify-content: center;
+    white-space: pre;
+}
+
+.landing-name > span {
+    width: 3vmin
+}
+
+.landing-pro {
+    display: flex;
+    justify-content: center;
+    white-space: pre;
+}
+
+.landing-pro > span {
+    width: 6vmin
+}
+
+.landing-para {
+    display: flex;
+    justify-content: center;
+    white-space: pre;
+}
+
+.landing-para > span {
+    width: 4vmin
+}
+
+
+
+
+
+
+
+
+  
+  

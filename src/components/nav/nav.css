@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Mecha';
+    src: url('../../assets/Denton.ttf') format('truetype');
+  }
+
+.nav-div {
+    width: 100vmin;
+    height: 80%;
+    background-color: rgba(13, 13, 13, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(
+        0%          0%,
+        95%         0%,
+        100%        50%,
+        100%        100%,
+        5%          100%,
+        0%          50%
+    );
+    animation: navFadeIn 2s;
+    position: relative;
+    align-self: flex-start;
+}
+
+@keyframes navFadeIn {
+    from {
+        top: -100%
+    } to {
+        top: 0%
+    }
+}
+  
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+li {
+    margin: 0 5vmin;
+}
+  
+a {
+    color: #D9A036;
+    text-decoration: none;
+    font-family: 'Mecha';
+    font-size: 2.5vmin;
+    transition: font-size 0.2s ease;
+}
+
+a:hover {
+    color: #F2E750;
+    font-size: 3vmin;
+    cursor: pointer;
+}
+
+

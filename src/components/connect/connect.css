@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Mecha';
+    src: url('../../assets/Denton.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'eurostile';
+    src: url('../../assets/eurostile.TTF') format('truetype');
+}
+
+.connect-div {
+    width: 100vw;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.connect-mobile {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.connect-plans {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.connect-plans > div {
+    width: 90%;
+    height: 70%;
+    background-color: rgba(13, 13, 13, 0.9);
+    clip-path: polygon(
+        5%          0%,
+        100%        0%,
+        100%        90%,
+        95%         100%,
+        0%          100%,
+        0%          10%
+    );
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    place-items: center;
+}
+
+.connect-plans > div > h3 {
+    font-family: 'Mecha';
+    font-size: 3.5vmin;
+    color: #F2E750;
+}
+
+.connect-plans > div > p {
+    font-family: 'eurostile';
+    font-size: 3vmin;
+    color: whitesmoke;
+    padding: 1vmin
+}
+
+
+
+
+.connect-form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.connect-form > div {
+    width: 90%;
+    height: 70%;
+    background-color: rgba(13, 13, 13, 0.9);
+    clip-path: polygon(
+        5%          0%,
+        100%        0%,
+        100%        90%,
+        95%         100%,
+        0%          100%,
+        0%          10%
+    );
+    display: grid;
+    place-items: center;
+}
+
+.form-input {
+    width: 40vmin;
+    height: 4vmin;
+    position: relative;
+}
+
+.form-text {
+    width: 40vmin;
+    height: 15vmin;
+    overflow: hidden;
+}
+
+.form-send-input {
+    position: relative;
+    width: 20vmin;
+    height: 4vmin;
+    left: 25%;
+    background-color: #403014;
+    font-family: 'eurostile';
+    border: none;
+    color: #D9A036;
+    font-size: 2.5vmin;
+}
+
+input[type='text'],
+input[type='input'],
+input[type='email'],
+textarea {
+    background-color: #403014;
+    color: white;
+    font-family: 'eurostile';
+    border: none;
+    font-size: 2.5vmin;
+}
+
+input[type='text']::placeholder,
+input[type='input']::placeholder,
+input[type='email']::placeholder,
+textarea::placeholder {
+    color: #D9A036;
+    display: grid;
+
+}
+
+hr {
+    background-color: #F2E750;
+    height: 0.5vmin;
+}
+
+.thanks {
+    font-size: 3vmin;
+    font-family: 'eurostile';
+    color:#F2E750
+}
+
+
+
+.connect-social {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.connect-social > div {
+    width: 90%;
+    height: 70%;
+    background-color: rgba(13, 13, 13, 0.9);
+    clip-path: polygon(
+        5%          0%,
+        100%        0%,
+        100%        90%,
+        95%         100%,
+        0%          100%,
+        0%          10%
+    );
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    place-items: center;
+}
+
+.connect-social > div > h3 {
+    font-family: 'Mecha';
+    font-size: 3.5vmin;
+    color: #F2E750;
+}
+
+.socialMedia {
+    display: flex;
+    width: 75%;
+    justify-content: space-evenly;
+}
+
+.socialMedia > img {
+    width: 7vmin
+}
+
+.socialMedia > img:hover {
+    cursor: pointer;
+}
+
+.socialMedia > img:nth-child(4) {
+    background-color: #D9A036;
+}
