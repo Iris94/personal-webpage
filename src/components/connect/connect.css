@@ -180,14 +180,11 @@ hr {
     justify-content: space-evenly;
 }
 
-.socialMedia > img {
-    width: 7vmin
+.icons {
+    font-size: 5vmin;
+    color: #F2E750
 }
 
-.socialMedia > img:hover {
-    cursor: pointer;
-}
-
-.socialMedia > img:nth-child(4) {
-    background-color: #D9A036;
+.icons:hover {
+    cursor: pointer
 }

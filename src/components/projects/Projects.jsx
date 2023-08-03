@@ -4,19 +4,16 @@ import Neon from '../../assets/neon.gif';
 import Law from '../../assets/law.gif';
 import Tetris from '../../assets/tetris.gif';
 import Laptop from '../../assets/laptop.png';
-import Html from '../../assets/html.png';
-import Css from '../../assets/css.png';
-import Javascript from '../../assets/javascript.png'
-import Sass from '../../assets/sass.png'
-import ReactLogo from '../../assets/react.png'
-import Bootstrap from '../../assets/bootstrap.png'
+import xPravnik from '../../assets/gif2.gif'
+import { FaHtml5, FaCss3, FaJs, FaReact, FaSass  } from 'react-icons/fa'
+import { SiTailwindcss, SiNextdotjs, SiBootstrap, SiGithub } from 'react-icons/si'
 
 
 function Projects() {
   const [isMobileWidth, setIsMobileWidth] = useState(false);
-  const [defaultGif, setDefaultGif] = useState(Neon);
-  const [defaultText, setDefaultText] = useState(neonText);
-  const [defaultHeader, setDefaultHeader] = useState(neonHeader);
+  const [defaultGif, setDefaultGif] = useState(xPravnik);
+  const [defaultText, setDefaultText] = useState(pravnikText);
+  const [defaultHeader, setDefaultHeader] = useState(pravnikHeader);
   const [gifNum, setGifNum] = useState(1);
 
   useEffect(() => {
@@ -36,6 +33,9 @@ function Projects() {
     let url = '';
 
     switch (defaultGif) {
+      case xPravnik:
+          url = 'https://x-pravnik-iris94.vercel.app/'
+        break;
       case Tetris:
           url = 'https://iris94.github.io/Tetris/'
         break;
@@ -52,31 +52,38 @@ function Projects() {
     return window.open(url, '_blank')
   }
 
+  const switchToXPravnik = () => {
+    setDefaultGif(xPravnik)
+    setDefaultText(pravnikText)
+    setDefaultHeader(pravnikHeader)
+    setGifNum(1)
+  }
+
   const switchToNeonCity = () => {
     setDefaultGif(Neon);
     setDefaultText(neonText);
     setDefaultHeader(neonHeader);
-    setGifNum(1);
+    setGifNum(2);
   };
 
   const switchToLaw = () => {
     setDefaultGif(Law);
     setDefaultText(lawText);
     setDefaultHeader(lawHeader);
-    setGifNum(2);
+    setGifNum(3);
   };
 
   const switchToTetris = () => {
     setDefaultGif(Tetris);
     setDefaultText(tetrisText);
     setDefaultHeader(tetrisHeader);
-    setGifNum(3);
+    setGifNum(4);
   };
 
   const previousCode = () => {
     setGifNum((prevNum) => {
       if (prevNum === 1) {
-        return 3;
+        return 4;
       } else {
         return prevNum - 1;
       }
@@ -85,7 +92,7 @@ function Projects() {
 
   const nextCode = () => {
     setGifNum((prevNum) => {
-      if (prevNum === 3) {
+      if (prevNum === 4) {
         return 1;
       } else {
         return prevNum + 1;
@@ -96,16 +103,21 @@ function Projects() {
   useEffect(() => {
     switch (gifNum) {
       case 1:
+        setDefaultGif(xPravnik)
+        setDefaultText(pravnikText)
+        setDefaultHeader(pravnikHeader)
+        break;
+      case 2:
         setDefaultGif(Neon);
         setDefaultText(neonText);
         setDefaultHeader(neonHeader);
         break;
-      case 2:
+      case 3:
         setDefaultGif(Law);
         setDefaultText(lawText);
         setDefaultHeader(lawHeader);
         break;
-      case 3:
+      case 4:
         setDefaultGif(Tetris);
         setDefaultText(tetrisText);
         setDefaultHeader(tetrisHeader);
@@ -125,6 +137,11 @@ function Projects() {
             ) : (
               <div className='code-main-nav'>
                 <ul>
+                  <li>
+                    <button className='width-50' onClick={switchToXPravnik}>
+                      xPravnik
+                    </button>
+                  </li>
                   <li>
                     <button className='width-50' onClick={switchToNeonCity}>
                       Neon City
@@ -168,12 +185,42 @@ function Projects() {
         <div className='code-skills'>
               <h3>Code Skills</h3>
               <div className='code-images'>
-                  <img src={Html} alt='html.png' />
-                  <img src={Css} alt='css.png' />
-                  <img src={Javascript} alt='js.png' />
-                  <img src={Sass} alt='sass.png' />
-                  <img src={ReactLogo} alt='react.png' />
-                  <img src={Bootstrap} alt='bootstrap.png' />
+                <div className='skill-div'>
+                  <FaHtml5 className='skill-icon'/>
+                  <p>HTML</p>
+                </div>
+                <div className='skill-div'>
+                  <FaCss3 className='skill-icon' />
+                  <p>CSS</p>
+                </div>
+                <div className='skill-div'>
+                  <FaJs className='skill-icon' />
+                  <p>Javascript</p>
+                </div>
+                <div className='skill-div'>
+                  <FaReact className='skill-icon' />
+                  <p>React</p>
+                </div>
+                <div className='skill-div'>
+                  <FaSass className='skill-icon' />
+                  <p>SASS</p>
+                </div>
+                <div className='skill-div'>
+                  <SiBootstrap className='skill-icon' />
+                  <p>Bootstrap</p>
+                </div>
+                <div className='skill-div'>
+                  <SiGithub className='skill-icon' />
+                  <p>Github</p>
+                </div>
+                <div className='skill-div'>
+                  <SiNextdotjs className='skill-icon' />
+                  <p>Next</p>
+                </div>
+                <div className='skill-div'>
+                  <SiTailwindcss className='skill-icon' />
+                  <p>Tailwind</p>
+                </div>
               </div>
         </div>
             
@@ -183,6 +230,9 @@ function Projects() {
 }
 
 export default Projects;
+
+const pravnikHeader = 'xPravnik'
+const pravnikText = `XPravnik is my latest and proudest project. It automatically writes judicial documents for you, and it works for every country in the former Yugoslavia. It's one of a kind and solves a significant problem for citizens, as they no longer need lawyers with this.`
 
 const neonHeader = 'Neon City';
 const neonText = 'Neon City is a project that I am currently working on in React. You arrive in a retro city and listen to Synthwave radio.';

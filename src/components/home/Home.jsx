@@ -10,7 +10,7 @@ function Home() {
   const initialRandomLetter = () => alphabet[Math.floor(Math.random() * alphabet.length)];
   const [binaryLetter, setBinaryLetter] = useState(Array.from({ length: 10 }, initialRandomLetter));
   const [binaryLetterMain, setBinaryLetterMain] = useState(Array.from({ length: 19 }, initialRandomLetter));
-  const [binaryLetterText, setBinaryLetterText] = useState(Array.from({ length: 52 }, initialRandomLetter));
+  const [binaryLetterText, setBinaryLetterText] = useState(Array.from({ length: 52 }, initialRandomLetter)); 
 
   useEffect(() => {
     const startTimeout = setTimeout(() => {

@@ -1,10 +1,7 @@
 import React, {useState, useEffect} from "react";
 import './connect.css'
 import { useForm } from '@formspree/react';
-import Linkedin from '../../assets/linkedin.png'
-import Instagram from '../../assets/instagram.png'
-import Facebook from '../../assets/facebook.png'
-import Github from '../../assets/github.png'
+import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa'
 
 function Connect () {
     const [isMobileWidth, setIsMobileWidth] = useState(false);
@@ -73,10 +70,10 @@ function Connect () {
                 <div>
                     <h3>Social Media</h3>
                     <div className="socialMedia">
-                        <img src={Linkedin} alt="ld-png" onClick={() => openSocialMedia('linkedin')}/>
-                        <img src={Instagram} alt="ig-png" onClick={() => openSocialMedia('instagram')}/>
-                        <img src={Facebook} alt="fb-png" onClick={() => openSocialMedia('facebook')}/>
-                        <img src={Github} alt="gh-png" onClick={() => openSocialMedia('github')} />
+                        <FaLinkedin onClick={() => openSocialMedia('linkedin')} className="icons" />
+                        <FaInstagram onClick={() => openSocialMedia('instagram')} className="icons" />
+                        <FaFacebook onClick={() => openSocialMedia('facebook')} className="icons" />
+                        <FaGithub onClick={() => openSocialMedia('github')} className="icons" />
                     </div>
                 </div>
             </div>
